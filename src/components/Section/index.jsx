@@ -10,17 +10,23 @@ import {
   DownArrow,
 } from "./styles";
 
-export function Section() {
+export function Section({
+  title,
+  description,
+  backgroundImg,
+  darkBtnText,
+  lightBtnText,
+}) {
   return (
-    <Container>
+    <Container bgImg={backgroundImg}>
       <ItemText>
-        <h1>Model S</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </ItemText>
       <ButtonsGroup>
         <Buttons>
-          <DarkButton>Custom Order</DarkButton>
-          <LightButton>Existing Inventory</LightButton>
+          <DarkButton>{darkBtnText}</DarkButton>
+          {lightBtnText && <LightButton>{lightBtnText}</LightButton>}
         </Buttons>
         <DownArrow src="/images/down-arrow.svg" />
       </ButtonsGroup>

@@ -23,7 +23,7 @@ export const Container = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/model-s.jpg");
+  background-image: ${(props) => `url("/images/${props.bgImg}")`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,6 +32,17 @@ export const Container = styled.div`
 export const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 20px;
+  }
 `;
 
 export const ButtonsGroup = styled.div`
@@ -42,6 +53,10 @@ export const ButtonsGroup = styled.div`
 export const Buttons = styled.div`
   display: flex;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const DarkButton = styled.div`
