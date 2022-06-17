@@ -9,6 +9,7 @@ import {
   LightButton,
   DownArrow,
 } from "./styles";
+import Fade from "react-reveal/Fade";
 
 export function Section({
   title,
@@ -19,15 +20,19 @@ export function Section({
 }) {
   return (
     <Container bgImg={backgroundImg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade bottom mirror>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
       <ButtonsGroup>
-        <Buttons>
-          <DarkButton>{darkBtnText}</DarkButton>
-          {lightBtnText && <LightButton>{lightBtnText}</LightButton>}
-        </Buttons>
+        <Fade bottom>
+          <Buttons>
+            <DarkButton>{darkBtnText}</DarkButton>
+            {lightBtnText && <LightButton>{lightBtnText}</LightButton>}
+          </Buttons>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" />
       </ButtonsGroup>
     </Container>
