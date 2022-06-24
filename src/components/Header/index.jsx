@@ -10,8 +10,14 @@ import {
   LanguageContainer,
   LanguageIcon,
 } from "./styles";
+import { selectCars } from "../../features/car/carSlice";
+
+import { useSelector } from "react-redux";
+
 export function Header() {
+  const cars = useSelector(selectCars);
   const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <Container>
       <a href=";">
@@ -19,18 +25,13 @@ export function Header() {
       </a>
       <CarsNavBar>
         <ul>
-          <li>
-            <a href=";">Model S</a>
-          </li>
-          <li>
-            <a href=";">Model 3</a>
-          </li>
-          <li>
-            <a href=";">Model X</a>
-          </li>
-          <li>
-            <a href=";">Model Y</a>
-          </li>
+          {cars.map((car, index) => (
+            <li key={index}>
+              {" "}
+              <a href=";">{car}</a>
+            </li>
+          ))}
+
           <li>
             <a href=";">Solar roof</a>
           </li>
@@ -56,18 +57,12 @@ export function Header() {
           <CloseNavIcon onClick={() => setNavbarOpen(false)} />
         </CloseContainer>
         <ul onClick={() => setNavbarOpen(false)}>
-          <li className="link">
-            <a href=";">Model S</a>
-          </li>
-          <li className="link">
-            <a href=";">Model 3</a>
-          </li>
-          <li className="link">
-            <a href=";">Model X</a>
-          </li>
-          <li className="link">
-            <a href=";">Model Y</a>
-          </li>
+          {cars.map((car, index) => (
+            <li key={index}>
+              {" "}
+              <a href=";">{car}</a>
+            </li>
+          ))}
           <li className="link">
             <a href=";">Solar roof</a>
           </li>
