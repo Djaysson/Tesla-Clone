@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/Footer";
 import { Section } from "../../components/Section";
 import { Container } from "./styles";
 export function Home() {
@@ -10,6 +11,7 @@ export function Home() {
         backgroundImg="model-s.jpg"
         darkBtnText="Custom Order"
         lightBtnText="Existing Inventory"
+        icon="/images/down-arrow.svg"
       />
       <Section
         title="Model Y"
@@ -17,6 +19,7 @@ export function Home() {
         backgroundImg="model-y.jpg"
         darkBtnText="Custom Order"
         lightBtnText="Existing Inventory"
+        icon=""
       />
       <Section
         title="Model 3"
@@ -24,6 +27,7 @@ export function Home() {
         backgroundImg="model-3.jpg"
         darkBtnText="Custom Order"
         lightBtnText="Existing Inventory"
+        icon=""
       />
       <Section
         title="Model X"
@@ -31,6 +35,7 @@ export function Home() {
         backgroundImg="model-x.jpg"
         darkBtnText="Custom Order"
         lightBtnText="Existing Inventory"
+        icon=""
       />
       <Section
         title="Solar Panels"
@@ -38,6 +43,7 @@ export function Home() {
         backgroundImg="solar-panel.jpg"
         darkBtnText="Order now"
         lightBtnText="Learn more"
+        icon=""
       />
       <Section
         title="Solar Roof"
@@ -45,6 +51,7 @@ export function Home() {
         backgroundImg="solar-roof.jpg"
         darkBtnText="Order now"
         lightBtnText="Learn more"
+        icon=""
       />
       <Section
         title="Accessories"
@@ -52,7 +59,10 @@ export function Home() {
         backgroundImg="accessories.jpg"
         darkBtnText="Shop now"
         lightBtnText=""
+        icon=""
       />
+
+      <Footer />
     </Container>
   );
 }

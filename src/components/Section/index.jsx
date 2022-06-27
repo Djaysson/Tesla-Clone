@@ -17,6 +17,7 @@ export function Section({
   backgroundImg,
   darkBtnText,
   lightBtnText,
+  icon,
 }) {
   return (
     <Container bgImg={backgroundImg}>
@@ -33,7 +34,7 @@ export function Section({
             {lightBtnText && <LightButton>{lightBtnText}</LightButton>}
           </Buttons>
         </Fade>
-        <DownArrow src="/images/down-arrow.svg" />
+        <DownArrow src={icon} />
       </ButtonsGroup>
     </Container>
   );
