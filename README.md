@@ -31,7 +31,7 @@ The **Tesla-Clone** project is a Web application that consists of a replica of t
 1. Make a clone of the repository:
 
 ```sh
-  $ git clone https://github.com/Djaysson/Tesla-Clone-with-ReactJS.git
+  $ git clone https://github.com/Djaysson/Tesla-Clone.git
 ```
 
 2. Application Execution:
